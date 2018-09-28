@@ -30,10 +30,10 @@ public class CompanyController {
         return addCompany;
     }
 
-    @GetMapping("queryAllCompany")
+    @GetMapping("queryAll")
     @ResponseBody
-    public Page<Company> queryAllCompany(){
-        Pageable pageParam = new PageRequest(0,3);
+    public Page<Company> queryAllCompany(Integer pageNum,Integer pageSize){
+        Pageable pageParam = new PageRequest(pageNum,pageSize);
         Page<Company> allCompany = companyService.queryAllCompany(pageParam);
         return allCompany;
     }
