@@ -15,7 +15,7 @@ public interface ICompanyService {
 
     Company addCompany(Company company);
 
-    Page<Company> queryAllCompany(Pageable pageParam);
+    Page<Company> queryAllCompany(Integer pageNum,Integer pageSize);
 
     Company queryOneCompany(String id);
 

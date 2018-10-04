@@ -22,7 +22,7 @@ public class HouseDetail {
     private Double area;
     private String remark;
     @ManyToOne
-    @JoinColumn(name = "house_type_id")
+    @JoinColumn(name = "type_id")
     private HouseType houseType;
     private Byte sysStatus;
 
